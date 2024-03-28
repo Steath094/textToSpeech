@@ -2,14 +2,14 @@ const textarea = document.querySelector("#textinput");
 const button = document.querySelector(".playbutton");
 
 
-const text = textarea.value;
-const speechsynth = window.speechSynthesis;
+
+
 
 console.log(textarea);
 console.log(button);
-
 button.addEventListener("click", function () {
-    
+    const speechsynth = window.speechSynthesis;
+    const text = textarea.value;
     if (!speechsynth.speaking && !text.trim().length ) {
         textarea.textContent = "Nothing to convert";
         textarea.style.color = 'red';
