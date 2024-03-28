@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    background: url(background.jpg) center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    /* background: rgba(13, 13, 255, 0.779); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    height: 66vh;
+    width: 28vw;
+    border: 2px solid black;
+    border-radius: 12px;
+
+}
+
+.child>h1 {
+    margin: 10px;
+    color: rgb(34, 155, 203);
+    font-family: "Rubik Moonrocks", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#textinput {
+    height: calc(50vh - 80px);
+    width: 87%;
+    margin: 20px;
+    margin-top: 0px;
+    resize: none;
+    background-color: unset;
+    border: 6px double wheat;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: larger;
+}
+/* .count{
+    margin-left: 22px;
+} */
+
+.speech {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.playbutton {
+    color: white;
+    background-color: turquoise;
+    padding: 14px;
+    width: 90%;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 450px) {
+    .child{
+        width: fit-content;
+        height: fit-content;
+    }
+    .child>h1{
+        font-size: 2rem;
+    }
+    #textinput{
+        width: 82%;
+    }
+    
+}
+@media only screen and (max-width: 1400px) {
+    .child{
+        width: fit-content;
+        height: fit-content;
+    }
+    
+}
