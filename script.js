@@ -1,11 +1,14 @@
 const textarea = document.querySelector("#textinput");
 const button = document.querySelector(".playbutton");
+
+
 const text = textarea.value;
+const speechsynth = window.speechSynthesis;
+
 console.log(textarea);
 console.log(button);
 
 button.addEventListener("click", function () {
-    const speechsynth = window.SpeechSynthesis;
     
     if (!speechsynth.speaking && !text.trim().length ) {
         textarea.textContent = "Nothing to convert";
@@ -19,12 +22,14 @@ button.addEventListener("click", function () {
     })
     if (!speechsynth.speaking && text.trim().length ){
         let utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
+        speechsynth.cancel();
+        speechsynth.speak(utterance);
         button.textContent = "Sound is playing"
     }
-    // setTimeout(() => {
-    //     button.textContent = "Play converted sound"
-    // }, 5000);
+
+//     setTimeout(() => {
+//         button.textContent = "Play converted sound"
+//     }, 5000);
 })
 // let utterance = new SpeechSynthesisUtterance("Hello world!");
 // speechSynthesis.speak(utterance);
