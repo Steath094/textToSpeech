@@ -36,18 +36,19 @@
 #textinput {
     height: calc(50vh - 80px);
     width: 87%;
-    margin: 20px;
-    margin-top: 0px;
+    margin:0px 20px;
+    /* margin-top: ; */
     resize: none;
     background-color: unset;
     border: 6px double wheat;
     border-radius: 8px;
     padding: 4px;
-    font-size: larger;
+    font-size: 1.2rem;
+    color: white;
 }
-/* .count{
+.count{
     margin-left: 22px;
-} */
+}
 
 .speech {
     display: flex;
@@ -69,7 +70,7 @@
 
 @media only screen and (max-width: 450px) {
     .child{
-        width: fit-content;
+        width: 98vw;
         height: fit-content;
     }
     .child>h1{
